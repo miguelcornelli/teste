@@ -1,0 +1,10 @@
+<div  [@flyInOut]="'in'" 
+      *ngIf="message" 
+      class="box-message" 
+      [ngClass]="{ 'alert': message, 
+                    'alert-success': message.type === 'success', 
+                    'alert-danger': message.type === 'error' }">
+    <div fxFlexAlign="center" class="alert">
+        <span fxFlexAlign="center">{{message.text}}</span>
+    </div>
+</div>
